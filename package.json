@@ -1,0 +1,11 @@
+{
+  "name": "hackernews-graphQL",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ElijahPrince73/hackernews-graphQL.git",
+  "author": "Elijah Prince <elijahprince73@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
