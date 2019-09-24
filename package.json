@@ -6,7 +6,9 @@
   "author": "Elijah Prince <elijahprince73@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
     "nodemon": "^1.19.2",
     "prisma-client-lib": "^1.34.8"
   },
