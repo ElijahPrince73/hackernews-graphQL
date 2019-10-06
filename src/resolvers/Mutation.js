@@ -29,7 +29,7 @@ const login = async (parent, args, context, info) => {
   }
 
   const token = jwt.sign({ userId: user.id }, APP_SECRET);
-
+  console.log(token);
   return {
     token,
     user
