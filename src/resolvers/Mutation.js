@@ -49,19 +49,19 @@ const post = (parent, args, context, info) => {
 const vote = async (parent, args, context, info) => {
   const userId = getUserId(context);
 
-  const linkExist = await context.prisma.$exist.vote({
+  const linkExists = await context.prisma.$exists.vote({
     user: { id: userId },
     link: { id: args.linkId }
-  })
-
-  if (linkExist) {
-    throw new Error(`Alread voted for link: ${args.linkId}`)
+  });
+  
+  if (linkExists) {
+    throw new Error(`Already voted for link: ${args.linkId}`);
   }
 
   return context.prisma.createVote({
-    user: { id: userId },
-    link: { id: args.linkId }
-  })
+    user: { connect: { id: userId } },
+    link: { connect: { id: args.linkId } }
+  });
 }
 
 module.exports = {
